@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> My Game </title>
+<style>
+body
+{
+	background-color:#f2f2f2;
+}
+#myBtn
+{
+	background-color:green;
+	border-radius:8px;
+	border-bottom-color:white;
+}
+		/* Hides Password From Seeing*/
+#values{
+	display:none;
+}
+		/*Style For Textboxes Where You Type Password*/
+#first{
+	font-size:40px; 
+}
+#second{	
+	font-size:40px;
+}
+#third{
+	font-size:40px; 
+}
+#fourth{
+	font-size:40px; 
+}
+		/* Style For Every Button*/
+button{
+	background-color:green;
+	color:white;
+	border-radius:5px;
+}
+button:hover{
+	background-color:red;
+}
+button:disabled:hover{
+	background-color:green;
+}
+		/* Style For Table Where You Enter Password*/
+#table{
+	border:4px solid black;
+}
+		/* Style For Show Password Button*/
+#pass{
+	display:none;
+	height:60px;
+}
+		/* Style For Reset Button*/
+#freset{
+	display:none;
+	height:60px;
+}
+	/* Sets Font Size For The Previous Value Textboxes */
+#a1{ 
+font-size:40px; 
+}
+#a2{
+ font-size:40px;
+ }
+#a3{
+ font-size:40px; 
+ }
+#a4{ 
+font-size:40px; 
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-body {
+	padding: 2px 16px;
+
+}
+</style>
+<script>
+	//Disables The Textbox 
+	function disable1(){
+		document.getElementById('first').disabled = true;
+}
+		
+	function disable2(){
+		document.getElementById('second').disabled = true;
+}
+		
+	function disable3(){
+		document.getElementById('third').disabled = true;
+}
+		
+	function disable4(){
+		document.getElementById('fourth').disabled = true;
+}
+	function undisable(){
+		document.getElementById('fourth').disabled = false;
+		
+		document.getElementById('third').disabled = false;
+		
+		document.getElementById('second').disabled = false;
+		
+		document.getElementById('first').disabled = false;
+		
+}
+	//Resets The Textbox
+	function reset(){
+		document.getElementById('fourth').value = "";
+		document.getElementById('third').value = "";
+		document.getElementById('second').value = "";
+		document.getElementById('first').value = "";
+}
+	//Checks Textbox Weather It Has Correct Value Or Not
+	function check(){
+		if(document.getElementById('first').value == document.getElementById('fifth').value){
+		if(document.getElementById('second').value == document.getElementById('sixth').value){
+		if(document.getElementById('third').value == document.getElementById('seventh').value){
+		if(document.getElementById('fourth').value == document.getElementById('eighth').value){
+			document.write("<center><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><font color=red size=9 >Congratulations!!!</font><br /></center>");
+		}
+		}
+		}
+		}
+		else{
+			alert("Better Try Next Time!!!");
+		}
+}
+		//??? ??? ???? ?? ?? !!!
+		
+		//Gives Color To Text Inside Textbox 1
+	function validatef(){
+
+			//first
+		if( document.getElementById('first').value==document.getElementById('fifth').value ){
+		document.getElementById('first').style.color = 'green';
+		}
+		else{
+		document.getElementById('first').style.color = 'red'; 
+		}
+		if( document.getElementById('first').value==document.getElementById('sixth').value ){
+		document.getElementById('first').style.color = 'orange';
+		}
+		else{}
+		if( document.getElementById('first').value==document.getElementById('seventh').value ){
+		document.getElementById('first').style.color = 'orange';
+		}
+		else{}
+		if( document.getElementById('first').value==document.getElementById('eighth').value ){
+		document.getElementById('first').style.color = 'orange';
+		}
+		else{}
+}
+		//Gives Color To Text Inside Textbox 2
+	function validateg(){
+		if( document.getElementById('second').value==document.getElementById('sixth').value ){
+		document.getElementById('second').style.color = 'green';
+		}
+		else{
+		document.getElementById('second').style.color = 'red'; 
+		}
+		if( document.getElementById('second').value==document.getElementById('seventh').value ){
+		document.getElementById('second').style.color = 'orange';
+		}
+		else{}
+		if( document.getElementById('second').value==document.getElementById('eighth').value ){
+		document.getElementById('second').style.color = 'orange';
+		}
+		else{}
+		if( document.getElementById('second').value==document.getElementById('fifth').value ){
+		document.getElementById('second').style.color = 'orange';
+		}
+		else{}
+}
+		//Gives Color To Text Inside Textbox 3
+		function validateh(){
+		if( document.getElementById('third').value==document.getElementById('seventh').value ){
+		document.getElementById('third').style.color = 'green';
+		}
+		else{
+		document.getElementById('third').style.color = 'red'; 
+		}
+		if( document.getElementById('third').value==document.getElementById('eighth').value ){
+		document.getElementById('third').style.color = 'orange';
+		}
+		else{}
+		if( document.getElementById('third').value==document.getElementById('fifth').value ){
+		document.getElementById('third').style.color = 'orange';
+		}
+		else{}
+		if( document.getElementById('third').value==document.getElementById('sixth').value ){
+		document.getElementById('third').style.color = 'orange';
+		}
+		else{}
+}
+		//Gives Color To Text Inside Textbox 4
+		function validatej(){
+		if( document.getElementById('fourth').value==document.getElementById('eighth').value ){
+		document.getElementById('fourth').style.color = 'green';
+		}
+		else{
+		document.getElementById('fourth').style.color = 'red'; 
+		}
+		if( document.getElementById('fourth').value==document.getElementById('fifth').value ){
+		document.getElementById('fourth').style.color = 'orange';
+		}
+		else{}
+		if( document.getElementById('fourth').value==document.getElementById('sixth').value ){
+		document.getElementById('fourth').style.color = 'orange';
+		}
+		else{}
+		if( document.getElementById('fourth').value==document.getElementById('seventh').value ){
+		document.getElementById('fourth').style.color = 'orange';
+		}
+		else{}
+}
+	
+	//Disables The Check Button,Enables The Password Button,Enables The Reset Button,Closes The Save Value Button
+	var counter = 1;
+
+	function disable_check(){
+	if(counter >= 4){
+		document.getElementById('check').disabled=true;
+		document.getElementById('pass').style.display = "block" ;
+		document.getElementById('freset').style.display = "block" ;
+		document.getElementById('save_value').style.display = "none" ;
+	
+		return false;
+	
+	}
+	else{
+		counter++;
+		}
+}
+	
+
+	//Writes Values In The Previous Value Textboxes
+	function write_value(){
+	
+	var counter = 1;
+	
+		if(counter >= 1){
+			document.getElementById('a1').value = document.getElementById('first').value;
+			document.getElementById('a1').style.color = document.getElementById('first').style.color;
+			document.getElementById('a2').value = document.getElementById('second').value;
+			document.getElementById('a2').style.color = document.getElementById('second').style.color;
+			document.getElementById('a3').value = document.getElementById('third').value;
+			document.getElementById('a3').style.color = document.getElementById('third').style.color;
+			document.getElementById('a4').value = document.getElementById('fourth').value;
+			document.getElementById('a4').style.color = document.getElementById('fourth').style.color;
+		}
+		else{
+		}
+}
+
+	//Sets Limit For Textbox
+	function limitText(limitField, limitNum) {
+		if (limitField.value.length > limitNum) {
+			limitField.value = limitField.value.substring(0, limitNum); 
+		} 
+} 
+	//Creates New Password When The Page Is Refreshed
+	function Captcha(){
+                     var alpha = new Array('1','2','3','4','5','6','7','8','9','0');
+                     var i;
+                     for (i=0;i<6;i++){
+                       var a = alpha[Math.floor(Math.random() * alpha.length)];
+                       var b = alpha[Math.floor(Math.random() * alpha.length)];
+                       var c = alpha[Math.floor(Math.random() * alpha.length)];
+                       var d = alpha[Math.floor(Math.random() * alpha.length)];
+                       var e = alpha[Math.floor(Math.random() * alpha.length)];
+                       var f = alpha[Math.floor(Math.random() * alpha.length)];
+                       var g = alpha[Math.floor(Math.random() * alpha.length)];
+                      }
+                    var code1 = a ;
+					  var code2 = b ;
+					    var code3 = c ;
+						  var code4 = d ;
+                    document.getElementById("fifth").value = code1
+					document.getElementById("sixth").value = code2
+					document.getElementById("seventh").value = code3
+					document.getElementById("eighth").value = code4
+                  }
+				  
+		//Shows You The Help Box
+	function modal(){
+	// Get the modal
+	var modal = document.getElementById('myModal');
+
+	// When the user clicks the button, open the modal 
+	document.getElementById("myBtn").onclick = function() {
+    modal.style.display = "block";
+}
+
+	// When the user clicks on <span> (x), close the modal
+	document.getElementsByClassName("close")[0].onclick = function() {
+		modal.style.display = "none";
+}
+}
+		//Shows You The Show Passwrod Button
+	function show_pass(){
+		document.getElementById("values").style.display = "block";
+}
+		//Resets Everything
+	function freset(){
+		window.location.reload();
+		document.getElementById('check').disabled=false;
+		document.getElementById('save_value').style.display = "block" ;
+			document.getElementById('a1').value = "";
+			document.getElementById('a2').value = "";
+			document.getElementById('a3').value = "";
+			document.getElementById('a4').value = "";
+}
+
+</script>
+</head>
+<body bgcolor="white" onload="Captcha();" >
+<input type=button id="myBtn" onclick="modal();" style="width:80px;height:30px;" value="Game Help" />
+<table align="center" >
+<tr>
+<td>
+<span id="values">
+The Password Is: 
+<input type="text" style="width:10px;height:10px;" id="fifth"/>
+<input type="text" style="width:10px;height:10px;" id="sixth"/>
+<input type="text" style="width:10px;height:10px;" id="seventh"/>
+<input type="text" style="width:10px;height:10px;" id="eighth"/>
+</span>
+</td>
+</tr>
+</table>
+<table border="0" align="center">
+<tr>
+<td>
+<img src="logo.png" style="width:200px;height:200px" id="logo" />
+</td>
+<td>
+<center><b><h1><font color="#002b80">Game</font></h1></b>
+</center>
+</td>
+</tr>
+</table>
+<br /><br />
+<center>
+<table id="table" border="0" cellpadding="5" cellspacing="5" >
+<tr>
+<td id="mytd" >
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" style="width:60px;height:60px;" max="9" min="0"  name="first" id="first"   onchange="validatef();disable1();" onKeyDown="limitText(this,1);" onKeyUp="limitText(this,1);"" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" style="width:60px;height:60px;" max="9" min="0" id="second"  onchange="validateg();disable2();" onKeyDown="limitText(this,1);" onKeyUp="limitText(this,1);"" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" style="width:60px;height:60px;" max="9" min="0" id="third"   onchange="validateh();disable3();" onKeyDown="limitText(this,1);" onKeyUp="limitText(this,1);"" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" style="width:60px;height:60px;" max="9" min="0" id="fourth"  onchange="validatej();disable4();" onKeyDown="limitText(this,1);" onKeyUp="limitText(this,1);""  />
+&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+<td>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick="check();disable_check();undisable();reset();" style="width:60px;height:60px;" id="check" >Check</button>
+</td>
+<td>
+<button onclick="write_value();" id="save_value" style="height:60px;" >Save Value </button>
+</td>
+<td>
+<button id="pass" onclick="show_pass();" style="height:60px;" >Show Password </button>
+</td>
+<td>
+<button id="freset" onclick="freset();" style="height:60px;" >reset</button>
+</td>
+</tr>
+</table>
+<br />
+</center>
+<br /><br /><br />
+	<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+<div class="modal-content">
+<div class="modal-header">
+<span class="close">&times;</span>
+<h2>Help</h2>
+</div>
+<div class="modal-body">
+<p>
+<font size="6">
+&nbsp;&nbsp;&nbsp;&nbsp; 1) Only Four Chances Will Be Given.
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp; 2) When The Number Is At Correct Place Then The Color Will Be <font color="green">Green</font>.
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp; 3) When The Number Is From The Hidden Password Then The Color Will Be <font color="Orange">Orange</font>.
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp; 4) When The Number Is Not From The Hidden Password Then The Color Will Be <font color="red">Red</font>.
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp; 5) You Can Not Change The Number Once It Is Typed.
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp; 5) The Number Can Repeat Twice.
+<br />
+</font>
+</p>
+</div>
+</div>
+</div>
+<center>
+<span id="mySpan" >
+<font size="5" >
+Previous Values:
+</font>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" style="width:60px;height:60px;" max="9" min="0" id="a1" readonly="readonly" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" style="width:60px;height:60px;" max="9" min="0" id="a2" readonly="readonly" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" style="width:60px;height:60px;" max="9" min="0" id="a3" readonly="readonly" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" style="width:60px;height:60px;" max="9" min="0" id="a4" readonly="readonly" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+</span>
+</center>
+</body>
+</html>
